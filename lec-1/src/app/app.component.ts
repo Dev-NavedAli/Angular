@@ -2,16 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
-  imports: [LoginComponent,SignupComponent],
+  imports: [LoginComponent,SignupComponent,ProfileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'lec-1';
-  name = "Naved Ali Khan";  
-  x=10;
-  y=39;
+  title = 'lec-1'; 
 }
