@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -13,18 +12,17 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'lec-1';
 
-  count = 0
+  handleEvent(event:any){
+    console.log("Click Event are here : ",event)
+  }
 
-  handleIncreement() {
-    this.count += 1
+  MouseEvent(event:any){
+    console.log("Mouse Event are here : ",event)
   }
-  handleDecreement() {
-    if (this.count > 0) {
-      this.count -= 1
-    }
-  }
-  handleReset() {
-    this.count = 0
+
+  inputEvent(event:any){
+    console.log("Input Event : ",(event.target.value));
+    
   }
 
 }
