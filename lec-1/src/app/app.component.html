@@ -7,10 +7,13 @@
 </head>
 <body>
     <h1>ROOT COMPONENT</h1>
-    <button (click)="handleClickEvent()" >Click Me </button>
+    
     <login/>
     <signup/>
     <profile/>
-    
+    <h1 class="text-center" >Counter App  {{count}} </h1>
+    <button (click)="handleReset()" >Reset</button>
+    <button (click)="handleIncreement()" >Increement</button>
+    <button (click)="handleDecreement()" >Decreement</button>
 </body>
 </html>

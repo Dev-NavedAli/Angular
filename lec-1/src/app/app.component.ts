@@ -6,21 +6,25 @@ import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
-  imports: [LoginComponent,SignupComponent,ProfileComponent],
+  imports: [LoginComponent, SignupComponent, ProfileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'lec-1'; 
+  title = 'lec-1';
 
-  handleClickEvent():any{
-    console.log('heyyyyyyyyy');
-    this.otherFunction()
-    
+  count = 0
+
+  handleIncreement() {
+    this.count += 1
   }
-
-  otherFunction(){
-    console.log('Other function is caleed');
+  handleDecreement() {
+    if (this.count > 0) {
+      this.count -= 1
+    }
+  }
+  handleReset() {
+    this.count = 0
   }
 
 }
