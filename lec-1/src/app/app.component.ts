@@ -12,17 +12,29 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'lec-1';
 
-  handleEvent(event:any){
-    console.log("Click Event are here : ",event)
+  name = ""
+  displayName=""
+  email=""
+
+  getName(event: any) {
+    this.name = (event.target.value)
   }
 
-  MouseEvent(event:any){
-    console.log("Mouse Event are here : ",event)
+  showName(){
+    this.displayName=this.name
   }
 
-  inputEvent(event:any){
-    console.log("Input Event : ",(event.target.value));
+  setName(){
+    this.name ='hello'
+  }
+
+  getEmail(val:string){
+    this.email=val
     
   }
-
+  setEmail(val:string){
+    this.email='val'
+    
+  }
+  
 }

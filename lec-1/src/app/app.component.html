@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>ROOT COMPONENT</h1>
-    <login/>
-    <signup/>
-    <profile/>
-    <h1>Event in Angular</h1>
-    <button (click)="handleEvent($event)">Click Event</button>
-    <div (mouseenter)="MouseEvent($event)" style="background-color: green; width: 50px; height: 50px;  "></div>
-    <input type="text" (input)="inputEvent($event)"  >
+    <login />
+    <signup />
+    <profile />
+    <h1>Get and set the input value {{displayName}} </h1>
+        <input (input)="getName($event)" value="{{name}}" type="text">
+        <br>
+        <br>
+        <button  (click)="showName()" >Get Value</button>
+        <button  (click)="setName()" >Set Value</button>
+        <hr>
 
+        <h1>Email {{email}}</h1>
+        <input type="text" value={{email}} placeholder="enter email"  #emailField >
+        <button (click)="getEmail(emailField.value)" >Get Email</button>
+        <button (click)="setEmail()">Set Email</button>
 </body>
+
 </html>
