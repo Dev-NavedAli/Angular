@@ -12,4 +12,15 @@ import { ProfileComponent } from './profile/profile.component';
 })
 export class AppComponent {
   title = 'lec-1'; 
+
+  handleClickEvent():any{
+    console.log('heyyyyyyyyy');
+    this.otherFunction()
+    
+  }
+
+  otherFunction(){
+    console.log('Other function is caleed');
+  }
+
 }
