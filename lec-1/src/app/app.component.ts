@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, effect, signal, WritableSignal } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -12,17 +12,11 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'lec-1';
 
-  count  = signal(10)
-  x= 20;
+  data:WritableSignal<number> =  signal(10)
 
-  constructor(){
-    effect(()=>{
-      console.log(this.count());
-    })
-  }
-
-  updateValue(){
-    this.count.set(this.count()+1)    
+  updateSignal(){
+    // this.data.set("hello")
+    this.data.update((val)=>val+1)
   }
 
 }
