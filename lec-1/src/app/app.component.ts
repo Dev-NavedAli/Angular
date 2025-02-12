@@ -12,29 +12,23 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'lec-1';
 
-  name = ""
-  displayName=""
-  email=""
+  display = true
+  toggleDiv = true
 
-  getName(event: any) {
-    this.name = (event.target.value)
-  }
-
-  showName(){
-    this.displayName=this.name
+  hide() {
+    this.display = false
   }
 
-  setName(){
-    this.name ='hello'
+  show(){
+    this.display = true;
   }
 
-  getEmail(val:string){
-    this.email=val
-    
+  toggle(){
+    this.display = !this.display
   }
-  setEmail(val:string){
-    this.email='val'
-    
+
+  toggleDiv2(){
+    this.toggleDiv = !this.toggleDiv
   }
-  
+
 }

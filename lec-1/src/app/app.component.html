@@ -9,21 +9,32 @@
 
 <body>
     <h1>ROOT COMPONENT</h1>
-    <login />
-    <signup />
-    <profile />
-    <h1>Get and set the input value {{displayName}} </h1>
-        <input (input)="getName($event)" value="{{name}}" type="text">
-        <br>
-        <br>
-        <button  (click)="showName()" >Get Value</button>
-        <button  (click)="setName()" >Set Value</button>
-        <hr>
+    <!-- <login /> -->
+    <!-- <signup /> -->
+    <!-- <profile /> -->
+    <h1>If Else | Control Flow In Angular </h1>
 
-        <h1>Email {{email}}</h1>
-        <input type="text" value={{email}} placeholder="enter email"  #emailField >
-        <button (click)="getEmail(emailField.value)" >Get Email</button>
-        <button (click)="setEmail()">Set Email</button>
+
+    <button (click)="hide()">Hide</button>
+    <button (click)="show()">show</button>
+    <button (click)="toggle()">toggle</button>
+
+    @if(display){
+    <div style="height: 200px; width: 200px; background-color: green;">
+
+    </div>
+    }
+    <hr>
+
+    <button (click)="toggleDiv2()" >{{toggleDiv ? 'show red div ' : 'show gold div' }}</button>
+    @if(toggleDiv){
+    <div style="width: 200px; height: 200px; background-color: yellow;">
+    </div>
+    }
+    @else{
+    <div style="width: 200px; height: 200px; background-color: red;">
+    </div>
+    }
 </body>
 
 </html>
