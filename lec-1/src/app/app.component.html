@@ -12,29 +12,42 @@
     <!-- <login /> -->
     <!-- <signup /> -->
     <!-- <profile /> -->
-    <h1>If Else | Control Flow In Angular </h1>
-
-
-    <button (click)="hide()">Hide</button>
-    <button (click)="show()">show</button>
-    <button (click)="toggle()">toggle</button>
-
-    @if(display){
-    <div style="height: 200px; width: 200px; background-color: green;">
-
-    </div>
+    <h1> Else  If | Control Flow In Angular </h1>
+    <button (click)="handleColor('red')" >Red</button>
+    <button (click)="handleColor('green')" >Green</button>
+    <button (click)="handleColor('yellow')" >yellow</button>
+    <button (click)="handleColor('blue')" >Blue</button>
+    <button (click)="handleColor('magenta')" >Magenta</button>
+    <button (click)="handleColor('lime')" >Lime</button>
+    <button (click)="handleColor('jvl')" >Xyz color</button>
+    <input type="text" placeholder="enter color" (input)="changeColor($event)" >
+    
+    @switch(color){
+        @case('red'){
+            <h1 style="background-color: red;">Red Color</h1>
+        }
+        @case('green'){
+            <h1 style="background-color: green;">green Color</h1>
+        }
+        @case('blue'){
+            <h1 style="background-color: blue;">blue Color</h1>
+        }
+        @case('yellow'){
+            <h1 style="background-color: yellow;">yellow Color</h1>
+        }
+        @case('magenta'){
+            <h1 style="background-color: magenta;">Magenta Color</h1>
+        }
+        @case('lime'){
+            <h1 style="background-color: lime;">lime Color</h1>
+        }
+        @default{
+            <h1 style="background-color: black;">No color Match</h1>
+        }
     }
-    <hr>
 
-    <button (click)="toggleDiv2()" >{{toggleDiv ? 'show red div ' : 'show gold div' }}</button>
-    @if(toggleDiv){
-    <div style="width: 200px; height: 200px; background-color: yellow;">
-    </div>
-    }
-    @else{
-    <div style="width: 200px; height: 200px; background-color: red;">
-    </div>
-    }
+
+    
 </body>
 
 </html>

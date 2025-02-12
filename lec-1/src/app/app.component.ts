@@ -12,23 +12,15 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'lec-1';
 
-  display = true
-  toggleDiv = true
+  color="green"
 
-  hide() {
-    this.display = false
+  handleColor(val:string){
+    this.color = val
   }
 
-  show(){
-    this.display = true;
+  changeColor(event:any){
+    console.log(event.target.value);
+    
+    this.color = event.target.value
   }
-
-  toggle(){
-    this.display = !this.display
-  }
-
-  toggleDiv2(){
-    this.toggleDiv = !this.toggleDiv
-  }
-
 }
