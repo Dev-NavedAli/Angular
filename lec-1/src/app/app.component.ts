@@ -12,15 +12,18 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'lec-1';
 
-  color="green"
+  heros = ['Thor', 'hulk', 'tony', 'captain America', 'wanda']
 
-  handleColor(val:string){
-    this.color = val
+  students = [
+    { name: 'Naved Ali Khan', age: 25, email: "nomanali50997@gmail.com" },
+    { name: 'Noman Ali Khan', age: 23, email: "noman@gmail.com" },
+    { name: 'Fareed Ali Khan', age: 24, email: "Devnoman@gmail.com" },
+    { name: 'Sarwaz Ali Khan', age: 26, email: "sarwaz@gmail.com" },
+    { name: 'Taqee Ali Khan', age: 19, email: "TaqeeOLp@gmail.com" }
+  ]
+
+  getName(val: string) {
+    console.log(val);
   }
 
-  changeColor(event:any){
-    console.log(event.target.value);
-    
-    this.color = event.target.value
-  }
 }
