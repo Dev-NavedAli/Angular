@@ -13,19 +13,9 @@
     <!-- <signup /> -->
     <!-- <profile /> -->
      
-    @for(hero of heros; track hero){
-        <h2>{{hero}}</h2>
-    }
-
-    @for(student of students; track student;let id=$index){
-        <h2>
-            <span>{{id+1}}</span>&nbsp;
-            <span>{{student.name}}</span>&nbsp;
-            <span>{{student.age}}</span>&nbsp;
-            <span>{{student.email}}</span>&nbsp;
-            <button (click)="getName(student.name)" style="padding: 10px;">Get Name</button>
-        </h2>
-    }
+    <h1>{{count()}}</h1>
+    <h1>{{x}}</h1>
+    <button (click)="updateValue()">Increase</button>
 
 </body>
 
