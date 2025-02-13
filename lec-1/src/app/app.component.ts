@@ -13,20 +13,6 @@ export class AppComponent {
   title = 'lec-1';
 
 
-  count = signal(0)
-  displayHeading = false
-
-  constructor(){
-    effect(()=>{
-      if(this.count()==2){
-        this.displayHeading = true
-        setTimeout(()=>{
-          this.displayHeading = false
-        },2000)
-      }else{
-        this.displayHeading = false
-      }
-    })
-  }
+  users = ['Naved', 'Khan' , 'Noman' , 'Saim' , 'gulam', 'Zoi']
 
 }

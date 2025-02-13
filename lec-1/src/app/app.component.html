@@ -14,13 +14,28 @@
     <!-- <profile /> -->
 
 
-    <h1> {{count()}} </h1>
-    <button (click)="count.set(count()+1)">Update</button>
+  <h1>For loop contextual Variable</h1>
 
-    @if(displayHeading){
-    <h1 style="background-color: green;">Page heading </h1>
+  @for(user of users ; track user; ; let id = $index){
+
+    <!-- @if($first || $last){
+        <h2 style="background-color: red;" >this is {{id+1}} user and the name is {{user}}</h2>
     }
+    @else{
+        <h2>this is {{id+1}} user and the name is {{user}}</h2>
+    } -->
+    @if($even){
+        <h2 style="background-color: lime;">this is {{id+1}} user and the name is {{user}}</h2>
+    }
+    @if($odd){
+        <h2 style="background-color: green;">this is {{id+1}} user and the name is {{user}}</h2>
+    }
+     {{$count}}  <!-- total count dikhaega -->
+  }
 
+  @empty(){
+    <h1>No Record found</h1>
+  }
 
 </body>
 
