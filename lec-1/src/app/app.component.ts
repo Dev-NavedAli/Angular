@@ -11,7 +11,17 @@ export class AppComponent {
   title = 'lec-1';
 
 
-  name=""
+  task:string = "";
+  taskList:{id:number,task:string}[] = []
+
+  addTask(){
+    this.taskList.push({id:this.taskList.length+1,task:this.task})
+    this.task =""
+  }
+  removeTask(taskId:number){
+    this.taskList = this.taskList.filter((item)=>item.id!=taskId)
+    
+  }
 
 
 }

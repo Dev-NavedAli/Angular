@@ -9,10 +9,19 @@
 
 <body>
     <h1>ROOT COMPONENT</h1>
-  <h1>Two Way Binding</h1>
+    <h1>TO DO LIST</h1>
 
-  <input [(ngModel)]="name" type="text">
-  <h1>{{name}}</h1>
+    <input type="text" [(ngModel)]="task" style="height: 25px">
+    <button (click)="addTask()" style="padding: 10px; width: 80px; margin-left: 10px; ">Add</button>
+
+    <ol>
+        @for(task of taskList; track task){
+        <li>{{task.task}} <span><button (click)="removeTask(task.id)" >Delete</button></span> </li>
+        }
+
+    </ol>
+
+
 
 
 
