@@ -12,9 +12,15 @@
     <!-- <login /> -->
     <!-- <signup /> -->
     <!-- <profile /> -->
-     
-    <h1>{{data()}}</h1>
-    <button (click)="updateSignal()">Increase</button>
+
+
+    <h1> {{count()}} </h1>
+    <button (click)="count.set(count()+1)">Update</button>
+
+    @if(displayHeading){
+    <h1 style="background-color: green;">Page heading </h1>
+    }
+
 
 </body>
 

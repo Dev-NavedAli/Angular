@@ -1,4 +1,4 @@
-import { Component, effect, signal, WritableSignal } from '@angular/core';
+import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -12,11 +12,21 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title = 'lec-1';
 
-  data:WritableSignal<number> =  signal(10)
 
-  updateSignal(){
-    // this.data.set("hello")
-    this.data.update((val)=>val+1)
+  count = signal(0)
+  displayHeading = false
+
+  constructor(){
+    effect(()=>{
+      if(this.count()==2){
+        this.displayHeading = true
+        setTimeout(()=>{
+          this.displayHeading = false
+        },2000)
+      }else{
+        this.displayHeading = false
+      }
+    })
   }
 
 }
