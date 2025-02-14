@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [NgSwitchCase, NgSwitch, NgSwitchDefault],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -12,10 +12,6 @@ export class AppComponent {
   title = 'lec-1';
 
 
-  color = ''
-
-  changeColor(rang: string) {
-    this.color = rang
-  }
+  
 
 }
