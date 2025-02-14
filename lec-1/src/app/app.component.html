@@ -8,11 +8,8 @@
 </head>
 
 <body>
-    <h1   [style.backgroundColor]="bgColor"  >ROOT COMPONENT</h1>
-    <h2   [style.backgroundColor]="todo ? todoTrue : todoFalse " >TO DO LIST</h2>
-    <h2   [style.fontSize.pt]="size" >TO DO LIST 2 </h2>
-
-    <button (click)="updateColor()" >Update Color</button>
+    <h1 *ngIf="show" >Heading One 1 </h1>
+    <h1 >Heading 2  </h1>
 
 </body>
 

@@ -1,27 +1,19 @@
+import { NgIf } from '@angular/common';
 import { Component} from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule],
+  imports: [NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'lec-1';
 
+  show = false
 
-  bgColor = "red"
-  todoTrue = "red"
-  size="40"
-  todoFalse = "green"
-
-
-  todo=false
-
-  updateColor(){
-    this.todo = !this.todo
-  }
+  
 
 
 }
