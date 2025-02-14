@@ -11,20 +11,17 @@ export class AppComponent {
   title = 'lec-1';
 
 
- task=""
- taskList:{id:number,task:string}[]=[]
+  bgColor = "red"
+  todoTrue = "red"
+  size="40"
+  todoFalse = "green"
 
- addTask(){
-  this.taskList.push({id:this.taskList.length+1,task:this.task})
-  console.log(this.taskList);
-  this.task= ""
- }
 
- deleteTask(taskId:number){
-    this.taskList = this.taskList.filter((item)=> item.id != taskId )
-    console.log(this.taskList);
-    
- }
+  todo=false
+
+  updateColor(){
+    this.todo = !this.todo
+  }
 
 
 }
