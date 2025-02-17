@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'profile', component: ProfileComponent },
+    { path: 'profile', component: ProfileComponent,data:{name:'Naved Ali'} },
     { path: 'contact', component: ContactComponent },
     { path: 'about', component: AboutComponent },
     { path: 'login', component: LoginComponent },

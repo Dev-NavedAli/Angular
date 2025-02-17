@@ -11,8 +11,5 @@ export class HomeComponent {
 
   constructor(private router:Router){}
 
-  goToProfile(){
-     this.router.navigate(['profile'],{queryParams:{name:'Naved Ali'}})
-  }
 
 }
