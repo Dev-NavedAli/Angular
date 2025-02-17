@@ -14,8 +14,11 @@ export class ProfileComponent {
 
     userName: string | null = ""
     ngOnInit() {
-        this.userName = this.route.snapshot.paramMap.get('name')
-        console.log(this.userName);
+        // this.userName = this.route.snapshot.paramMap.get('name')
+        // console.log(this.userName);
+        this.route.queryParams.subscribe(params=>{
+            this.userName = params['name'];
+        })
     }
 
 }
