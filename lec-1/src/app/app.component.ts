@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms'
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms'
 
 
 
@@ -12,12 +12,21 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms'
 export class AppComponent {
   title = 'lec-1';
 
-  name = new FormControl();
-  password = new FormControl();
+  profileForm = new FormGroup({
+    name: new FormControl(),
+    password: new FormControl(),
+    email: new FormControl(),
+  })
 
-  displayValue(){
-    console.log(this.name.value);
-    console.log(this.password.value);
+  onSubmit() {
+    console.log('Onsubmit Called', this.profileForm.value);
   }
 
+  setValue() {
+    this.profileForm.setValue({
+      name: "Noman",
+      password: "321",
+      email: "noman@50997gmail.com",
+    })
+  }
 }
