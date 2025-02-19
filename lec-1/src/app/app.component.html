@@ -8,13 +8,16 @@
 </head>
 
 <body>
-    <h1>Basic Routing</h1>
-    <ul>
-        @for(user of users; track user.id){
-            <li><a routerLink="/user/{{user.id}}/{{user.name}}">{{user.name}}</a></li>
-        }
-    </ul>
-    <router-outlet />  
+    <h1>Reactive Forms</h1>
+    <form method="post">
+        <input type="text" placeholder="enter name" [formControl]="name" >
+        <br><br>
+        <input type="text" placeholder="enter password" [formControl]="password" >
+        <br><br>
+        <button type="button" (click)="displayValue()" >Login</button>
+        <h3>{{name.value}}</h3>
+        <h3>{{password.value}}</h3>
+    </form> 
 </body>
 
 </html>
