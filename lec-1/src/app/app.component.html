@@ -8,22 +8,27 @@
 </head>
 
 <body>
-    <h1>Reactive Forms</h1>
-    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder=" enter the name " formControlName="name" >
-        <span class="error" *ngIf="name?.hasError('required')">Name is Required . </span> &nbsp;
-        <span class="error" *ngIf="name?.invalid && (name?.dirty || name?.touched)">Please Enter UserName</span>
+    <h1>Template Driven Forms</h1>
+
+    <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+        <input type="text" name="name" placeholder="enter the name" ngModel >
         <br><br>
-        <input type="password" placeholder="enter the password" formControlName="password" >
-        <span class="error" *ngIf="password?.hasError('required')" >Password is Required .</span> &nbsp;
-        <span class="error" *ngIf="password?.invalid" > Password must be 8 characters or long </span>
+        <input type="password"  name="password" placeholder="enter the password" ngModel >
         <br><br>
-        <input type="text" placeholder="enter the email" formControlName="email" >
-        <span class="error" *ngIf="email?.hasError('required')" > Please Enter the Email </span>
-        <span class="error" *ngIf="email?.invalid" > Email is invalid </span>
+        <select name="gender" ngModel >
+            <option value="">Select Gender </option>
+            <option value="male">Male </option>
+            <option value="female">Female </option>
+        </select> &nbsp;
+        <input type="range"  ngModel name="range" min="0" max="20">
         <br><br>
-        <button (click)="onSubmit()" >Submit</button>
+        <button>Add User</button>
     </form>
+   
+    <h1>{{userDetails?.name}}</h1>
+    <h1>{{userDetails?.password}}</h1>
+    <h1>{{userDetails?.gender}}</h1>
+    <h1>{{userDetails?.range}}</h1>
 </body>
 
 </html>
