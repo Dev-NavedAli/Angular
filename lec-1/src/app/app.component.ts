@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserComponent } from './user/user.component';
 
+
 @Component({
   selector: 'app-root',
   imports: [UserComponent],
@@ -9,7 +10,9 @@ import { UserComponent } from './user/user.component';
 })
 export class AppComponent {
 
-  userName='Noman Ali Khan'
+  users=['Naved','Peter','Sam','luck','kale']
+
+  
   
 
 }

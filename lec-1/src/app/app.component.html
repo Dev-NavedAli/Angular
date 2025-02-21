@@ -7,8 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Pass data to Child Component</h1>
-   <app-user [user]="userName"></app-user>
+    <h1>Reuse component</h1>
+    @for(user of users; track user){
+        <div>
+            <app-user  [user]="user" ></app-user>
+        </div>
+    }
+    
 </body>
 
 </html>
