@@ -7,31 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Template Driven Forms</h1>
-    <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
-        <input #name="ngModel"  ngModel  required pattern="[a-zA-Z0-9\s]+"  type="text"  name="name" placeholder="enter the name" >
-        <span *ngIf="name.invalid && name.touched"  >Name is Required Or Valid</span>
-        <br><br>
-        <input #password="ngModel" required  ngModel minlength="5" maxlength="12" type="password" name="password" placeholder="enter the password" >
-        <span *ngIf="password.invalid && password.touched"  >Please Enter the valid Password</span>
-        <br><br>
-        <input #email="ngModel" email required  ngModel  type="email" name="email" placeholder="enter the Email" >
-        <span *ngIf="email.invalid && email.touched"  >Please Enter the valid email</span>
-        <br><br>
-        <select #gender="ngModel" required ngModel  name="gender" >
-            <option value="">Select Gender </option>
-            <option value="male">Male </option>
-            <option value="female">Female </option>
-        </select> &nbsp;
-        <span *ngIf="gender.invalid && gender.touched"  >Please select the gender</span>
-        <input type="range" ngModel name="range" min="0" max="20">
-        <br><br>
-        <button [disabled]="userForm.invalid" >Add User</button>
-    </form>
-    <h1>{{userDetails?.name}}</h1>
-    <h1>{{userDetails?.password}}</h1>
-    <h1>{{userDetails?.gender}}</h1>
-    <h1>{{userDetails?.range}}</h1>
+    <h1>Pass data to Child Component</h1>
+   <app-user [user]="userName"></app-user>
 </body>
 
 </html>
