@@ -10,9 +10,12 @@ import { UserComponent } from './user/user.component';
 })
 export class AppComponent {
 
-  users=['Naved','Peter','Sam','luck','kale']
+  user:undefined|string[]
+  handleUsers(users: string[]) {
+    this.user = users
+  }
 
-  
-  
+
+
 
 }
