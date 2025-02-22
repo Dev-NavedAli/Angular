@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
-import { UserComponent } from './user/user.component';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
-  imports: [UserComponent],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
 
-  user:undefined|string[]
-  handleUsers(users: string[]) {
-    this.user = users
-  }
+  tittle='Naved Ali Khan'
+  tittle2='NAVED ALI KHAN'
+  tittle3='NAVED ALI KHAN'
 
+  date= new Date()
 
+  amount:number=10
 
 
 }
