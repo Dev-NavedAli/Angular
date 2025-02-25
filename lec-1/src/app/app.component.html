@@ -9,14 +9,16 @@
 
 <body>
     <h1>App Component</h1>
-    <button (click)="getProductData()">Get the Product Data</button>
-    @for(data of productData; track data){
-    <p>{{data.name}}</p>
+    <button (click)="getProductsData()">Get the Product Data</button>
+    @for(product of productList; track product){
+        <ul>
+            <li><b>Name:</b>{{product.title}}</li>
+            <li><b>Price:</b>{{product.price}}</li>
+            <li><b>Cateogery:</b>{{product.category}}</li>
+            <li><b>Rating:</b>{{product.rating}}</li>
+            <img src="{product.thumbnail}" alt="">
+        </ul>
     }
     <app-user></app-user>
-
-
-
 </body>
-
 </html>

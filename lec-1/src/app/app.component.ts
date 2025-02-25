@@ -1,24 +1,26 @@
 import { Component } from '@angular/core';
 import { UserComponent } from './user/user.component';
-import { ProductService } from './service/product.service';
-
+import { ProductsService } from './service/products.service';
 
 @Component({
   selector: 'app-root',
   imports: [UserComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] // ✅ Fixed from styleUrl to styleUrls
 })
 export class AppComponent {
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductsService) {}
 
-  productData: any; 
+  productList:any;
 
-  getProductData() {
-    this.productData = this.productService.getProductData()
+  getProductsData() {
+    this.productService.getProductList().subscribe((data: any) => {
+      console.log(data);
+      this.productList = data.products
+    });
+    console.log(this.productList);
+    
   }
-
-
 
 }
