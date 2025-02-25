@@ -8,12 +8,14 @@
 </head>
 
 <body>
-    <h1>Pipes in Angular</h1>
+    <h1>App Component</h1>
+    <h2>{{ counter }}</h2>
+    <button (click)="updateCounter()">Increement </button>
 
+    @if ( counter != 5){
+        <app-user [counter]="counter" ></app-user>
+    }
 
-    <h3>{{amount | currencyConvertor }}</h3>
-
-   
 </body>
 
 </html>
