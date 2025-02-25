@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserComponent } from './user/user.component';
+import { ProductService } from './service/product.service';
 
 
 @Component({
@@ -10,12 +11,14 @@ import { UserComponent } from './user/user.component';
 })
 export class AppComponent {
 
-  counter = 0
+  constructor(private productService: ProductService) { }
 
-  updateCounter(){
-    this.counter+=1;
+  productData: any; 
+
+  getProductData() {
+    this.productData = this.productService.getProductData()
   }
-  
+
 
 
 }

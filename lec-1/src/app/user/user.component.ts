@@ -8,22 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class UserComponent {
 
-  @Input() counter=0
-
-  // constructor(){
-  //   console.log('constructor');
-  // }
-
-  // ngOnInit(){
-  //   console.log('ngOnInit called')
-  // }
-  // ngOnDestroy(){
-  //   console.log('destroy called'); 
-  // }
-
-  ngOnChanges(){
-    console.log('onChanges called');
-    
-  }
+  
 
 }
